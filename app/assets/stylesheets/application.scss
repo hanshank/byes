@@ -16,3 +16,38 @@
 
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
+
+.logo {
+  max-height: 40px;
+}
+
+.intro-section {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  text-align: center;
+}
+
+footer {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+footer a {
+  color: black;
+}
+
+footer .col-3 {
+  justify-content: center;
+}

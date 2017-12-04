@@ -1,0 +1,2 @@
+module BegravelseHelper
+end

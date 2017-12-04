@@ -1,0 +1,2 @@
+class BegravelseController < ApplicationController
+end
