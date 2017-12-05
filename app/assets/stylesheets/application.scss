@@ -17,6 +17,35 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
 
+ .hero {
+   height: calc(100vh - 132px);
+   background-size: cover;
+ }
+
+ .homepage {
+   background-image: url('winter-berries.jpg');
+ }
+
+.hjelp {
+  background-image: url('snow-on-flower.jpg');
+}
+
+.til-begravelsen {
+  background-image: url('snowy-bushes.jpg');
+}
+
+.etter-begravelsen {
+  background-image: url('red-berries');
+}
+
+.om-oss{
+  background-image: url('red-berries');
+}
+
+.page-menu {
+  justify-content: center;
+}
+
 
 
  nav {
