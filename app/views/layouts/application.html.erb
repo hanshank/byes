@@ -8,6 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/3074d5300d.js"></script>
   </head>
 
   <body>
@@ -20,33 +21,154 @@
       });
 
     });
+
+
+      // breakpoint and up
+      $(window).resize(function(){
+        if ($(window).width() >= 768){
+
+        // when you hover a toggle show its dropdown menu
+        $(".navbar .dropdown-toggle").click(function () {
+           $(this).parent().toggleClass("show");
+           $(this).parent().find(".dropdown-menu").toggleClass("show");
+         });
+
+          // hide the menu when the mouse leaves the dropdown
+        $( ".navbar .dropdown-menu" ).mouseleave(function() {
+          $(this).removeClass("show");
+        });
+
+      // do something here
+    }
+    });
+
+
+
+    // document ready
+    });
     </script>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <%= link_to image_tag('logo.png', class: 'logo'), root_path, class: 'navbar-brand' %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <%= link_to image_tag('logo.png', class: 'logo'), root_path, class: 'navbar-brand' %>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"><i class="fa fa-phone" aria-hidden="true"></i> 70 12 12 55<span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-          <li class="navbar-item">
-            <a href="#" class="nav-link active" id="link">Minnesider</a>
-          </li>
-          <li class="navbar-item">
-            <a href="#" class="nav-link active">Kontakt</a>
-          </li>
-          <li class="navbar-item">
-            <a href="#" class="nav-link active">Se full meny</a>
-          </li>
-        </ul>
 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <%= link_to 'Minnesider', 'https://bye.vareminnesider.no', class: 'nav-link active' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Kontakt', pages_om_oss_path, class: 'nav-link active' %>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Full meny
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-3 dropdown-col">
+                    <ul class="nav flex-column">
+                    <li class="nav-item nav-link-title">
+                      <a class="nav-link nav-link-title" href="#">Ved dødsfall</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">I hjemmet</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">På institusjon</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">I utlandet</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Andre årsaker</a>
+                    </li>
+                  </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-3 dropdown-col">
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link nav-link-title" href="#">Til begravelsen</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Seremoni</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Blomster</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Kister</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Urner</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Musikk</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Transport</a>
+                    </li>
+                  </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-3 dropdown-col">
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link nav-link-title" href="#">Etter begravelsen</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Arv og skifte</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Gravsmonument</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Minnebok</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Urnenedsettelse</a>
+                    </li>
+                  </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                  <div class="col-md-3 dropdown-col">
+                    <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link nav-link-title" href="#">Om oss</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Vår historie</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Tilbakemeldinger</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Ansatte</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Priser</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Kontakt</a>
+                    </li>
+                  </ul>
+                  </div>
+                  <!-- /.col-md-4  -->
+                </div>
+              </div>
+              <!--  /.container  -->
+            </div>
+          </li>
+        </ul>
       </div>
-    </nav>
+
+
+</nav>
 
     <%= yield %>
 

@@ -4,8 +4,9 @@
       <div class="col-12">
         <h1>Begravelsen slik du ønsker det</h1>
       <div class="buttons">
-        <button type="button" name="button" class="btn btn-lg" id="button">Få hjelp nå</button>
-        <button type="button" name="button" class="btn btn-lg">Bestill blomster</button>
+        <!-- <button type="button" name="button" class="btn btn-lg" id="button">Få hjelp nå</button> -->
+        <%= link_to 'Få hjelp', pages_hjelp_ved_dodsfall_path, class: 'btn btn-lg id welcome-button' %>
+        <%= link_to 'Bestill blomster', 'https://bye.vareminnesider.no', class: 'btn btn-lg id welcome-button' %>
       </div>
     </div>
   </div>
