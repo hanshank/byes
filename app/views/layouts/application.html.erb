@@ -3,7 +3,6 @@
   <head>
     <title>Byes</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -55,7 +54,17 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <% if admin_signed_in? %>
+            <li class="nav-item">
+              <%= link_to 'Sign out', destroy_admin_session_path, method: :delete, class: 'nav-link' %>
+            </li>
+          <% end %>
+        </ul>
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <%= link_to 'Blogg', posts_path, class: 'nav-link active' %>
+          </li>
           <li class="nav-item">
             <%= link_to 'Minnesider', 'https://bye.vareminnesider.no', class: 'nav-link active' %>
           </li>
@@ -72,8 +81,8 @@
                 <div class="row">
                   <div class="col-md-3 dropdown-col">
                     <ul class="nav flex-column">
-                    <li class="nav-item nav-link-title">
-                      <a class="nav-link nav-link-title" href="#">Ved dødsfall</a>
+                    <li class="nav-item">
+                      <%= link_to 'Ved Dødsfall', pages_hjelp_ved_dodsfall_path, class: 'nav-link nav-link-title' %>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">I hjemmet</a>
@@ -93,7 +102,7 @@
                   <div class="col-md-3 dropdown-col">
                     <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a class="nav-link nav-link-title" href="#">Til begravelsen</a>
+                      <%= link_to 'Til begravelsen', pages_begravelse_path, class: 'nav-link nav-link-title' %>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Seremoni</a>
@@ -119,7 +128,7 @@
                   <div class="col-md-3 dropdown-col">
                     <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a class="nav-link nav-link-title" href="#">Etter begravelsen</a>
+                      <%= link_to 'Etter begravelsen', pages_etter_begravelsen_path, class: 'nav-link nav-link-title' %>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Arv og skifte</a>
@@ -139,7 +148,7 @@
                   <div class="col-md-3 dropdown-col">
                     <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a class="nav-link nav-link-title" href="#">Om oss</a>
+                      <%= link_to 'Om oss', pages_om_oss_path, class: 'nav-link nav-link-title' %>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Vår historie</a>
@@ -170,7 +179,17 @@
 
 </nav>
 
+<% if notice.present? %>
+  <p class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert.present? %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
     <%= yield %>
+
+    <br />
+    <br />
 
     <footer class="footer">
       <div class="container">

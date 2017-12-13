@@ -1,0 +1,21 @@
+<br />
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h1>Rediger innlegg</h1>
+      <%= form_for @post do |f| %>
+        <p>
+        <%= f.label :tittel %><br />
+        <%= f.text_field :title %>
+        </p>
+
+        <p>
+          <%= f.label :innlegg %><br />
+          <%= f.text_area :body %>
+        </p>
+        <%= f.submit 'Lagre innlegg', data: {:confirm => "Er du sikker at du vil oppdatere innlegget?"}, :class => 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>

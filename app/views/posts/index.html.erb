@@ -1,0 +1,25 @@
+<br />
+<br />
+<div class="container posts">
+  <div class="row">
+    <div class="col-10">
+      <% @posts.each do |post|%>
+        <br />
+        <h1><%= link_to post.title, post_path(post) %></h1>
+        <br />
+        <%= simple_format post.body.truncate_words(50) %>
+        <%= link_to 'Les mer', post_path(post), class: 'btn btn-sm btn-primary btn-post' %>
+        <% if admin_signed_in? %>
+          <%= link_to "Rediger", edit_post_path(post), class: 'btn btn-sm btn-primary btn-post' %>
+          <%= link_to "Slett", post, :method => :delete, data: {:confirm => "Er du sikker at du vil slette innlegget #{post.title}?"}, class: 'btn btn-sm btn-primary btn-post' %>
+        <% end %>
+        <br />
+      <% end %>
+    </div>
+  </div>
+
+  <br />
+  <% if admin_signed_in? %>
+  <%= link_to 'Nytt innlegg', new_post_path , class: 'btn btn-primary' %>
+  <% end %>
+</div>

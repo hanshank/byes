@@ -106,11 +106,17 @@
 }
 
 .etter-begravelsen {
-  background-image: url('red-berries');
+  background-image: url('red-berries.jpg');
 }
 
 .om-oss{
-  background-image: url('red-berries');
+  background-image: url('winter-nature.jpg');
+}
+
+footer {
+  background-image: url('debut-light.png') !important;
+  background-repeat: repeat;
+  background-size: auto;
 }
 
 
@@ -118,14 +124,12 @@
 
 
  nav {
-  -webkit-box-shadow: 0px 10px 38px 0px rgba(82, 82, 82, 0.55);
-  -moz-box-shadow: 0px 10px 38px 0px rgba(82, 82, 82, 0.55);
-  box-shadow: 0px 10px 38px 0px rgba(82, 82, 82, 0.55);
+  -webkit-box-shadow: 0px 2px 38px 0px rgba(82, 82, 82, 0.55);
+  -moz-box-shadow: 0px 2px 38px 0px rgba(82, 82, 82, 0.55);
+  box-shadow: 0px 2px 38px 0px rgba(82, 82, 82, 0.55);
  }
 
- footer {
-   border-top: 1px solid rgba(82, 82, 82, 0.55);
- }
+
 
 // .navbar-brand {
 //   position: relative !important;
@@ -180,6 +184,9 @@ footer .col-3 {
 .page-menu {
   justify-content: center;
   z-index: 100000;
+  -webkit-box-shadow: 0px 2px 17px 1px rgb(226, 226, 226);
+  -moz-box-shadow: 0px 2px 17px 1px rgb(226, 226, 226);
+  box-shadow: 0px 2px 17px 1px rgb(226, 226, 226);
 }
 
 
@@ -191,6 +198,14 @@ footer .col-3 {
   left: 0;
   top: 0;
   border-top: 0;
+}
+
+input {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
 }
 
 nav {
@@ -205,4 +220,21 @@ nav {
 
 .add-margin {
   margin-top: 56px;
+}
+
+footer {
+  background-image: url('white-texture.png');
+  background-repeat: repeat;
+}
+
+.posts a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/* Button design for posts */
+.btn-post {
+    background-color: white;
+    border: 1px solid black
 }
