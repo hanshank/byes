@@ -7,11 +7,11 @@ Rails.application.routes.draw do
 
   get 'pages/om_oss'
 
-  get 'static_pages/om'
-
   get 'welcome/homepage'
 
-  root 'welcome#homepage'
+  get 'dashboard/index'
+
+  root 'pages#homepage'
 
   resources :posts
   resources :admin

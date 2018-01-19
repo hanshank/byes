@@ -61,3 +61,10 @@ gem 'jquery-rails'
 gem 'devise'
 
 gem 'simple_form'
+
+# Image uploader
+gem 'carrierwave', '~> 1.0'
+
+gem 'mini_magick'
+
+gem 'tinymce-rails'

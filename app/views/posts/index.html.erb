@@ -2,17 +2,22 @@
 <br />
 <div class="container posts">
   <div class="row">
-    <div class="col-10">
+    <div class="col-8 offset-2">
       <% @posts.each do |post|%>
         <br />
         <h1><%= link_to post.title, post_path(post) %></h1>
+        <%= image_tag post.image, class: 'img-fluid' %>
         <br />
-        <%= simple_format post.body.truncate_words(50) %>
+        <p>
+          <%= simple_format post.content %>
+        </p>
+        <br />
         <%= link_to 'Les mer', post_path(post), class: 'btn btn-sm btn-primary btn-post' %>
         <% if admin_signed_in? %>
           <%= link_to "Rediger", edit_post_path(post), class: 'btn btn-sm btn-primary btn-post' %>
           <%= link_to "Slett", post, :method => :delete, data: {:confirm => "Er du sikker at du vil slette innlegget #{post.title}?"}, class: 'btn btn-sm btn-primary btn-post' %>
         <% end %>
+        <br />
         <br />
       <% end %>
     </div>

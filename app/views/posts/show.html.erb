@@ -1,17 +1,20 @@
 <br />
 <br />
 <div class="container">
-
-<h1 class="title">
-  <%= @post.title %>
-</h1>
-
-  <p class="date">
-    submitted <%= time_ago_in_words(@post.created_at) %> Ago
-  </p>
-
-  <p class="body">
-    <%= simple_format @post.body %>
-  </p>
-
+  <div class="row">
+    <div class="col-8 offset-2">
+      <h1 class="title">
+        <%= @post.title %>
+      </h1>
+      <div class="">
+        <%= image_tag @post.image, class: 'img-fluid' %>
+      </div>
+      <p class="date">
+        submitted <%= time_ago_in_words(@post.created_at) %> Ago
+      </p>
+      <div class="body">
+        <%= simple_format @post.content %>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  def homepage
+  end
+
   def hjelp_ved_dodsfall
   end
 

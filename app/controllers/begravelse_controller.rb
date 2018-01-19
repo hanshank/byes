@@ -1,2 +1,0 @@
-class BegravelseController < ApplicationController
-end

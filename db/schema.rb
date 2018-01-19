@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171212142005) do
+ActiveRecord::Schema.define(version: 20180115205729) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -46,11 +46,29 @@ ActiveRecord::Schema.define(version: 20171212142005) do
     t.index ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
   end
 
-  create_table "posts", force: :cascade do |t|
+  create_table "pages", force: :cascade do |t|
     t.string "title"
-    t.text "body"
+    t.integer "page_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["page_id"], name: "index_pages_on_page_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.string "image"
+    t.datetime "created_at", default: "2018-01-15 21:02:52", null: false
+    t.datetime "updated_at", default: "2018-01-15 21:02:52", null: false
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.integer "page_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["page_id"], name: "index_sections_on_page_id"
   end
 
 end

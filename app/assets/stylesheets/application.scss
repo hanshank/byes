@@ -17,6 +17,30 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
 
+
+ .navbar {
+   min-height: 80px;
+ }
+
+ svg {
+   height: 130px;
+   width: auto;
+   position: absolute;
+   position: absolute;
+   left: 50%;
+   -webkit-transform: translateX(-50%);
+   transform: translateX(-50%);
+   top: 2px;
+ }
+
+.navbar-small {
+  height: 30px;
+}
+
+.push-down {
+  margin-bottom: 30px;
+}
+
  .nav-item {
    text-transform: uppercase;
  }
@@ -89,12 +113,12 @@
 /* TEST END */
 
  .hero {
-   height: calc(100vh - 112px);
+   height: calc(100vh - 80px);
    background-size: cover;
  }
 
  .homepage {
-   background-image: url('winter-berries.jpg');
+   background-image: url('snowy-bushes.jpg');
  }
 
 .hjelp {
@@ -113,15 +137,15 @@
   background-image: url('winter-nature.jpg');
 }
 
+.sales {
+  height: 50vh;
+}
+
 footer {
   background-image: url('debut-light.png') !important;
   background-repeat: repeat;
   background-size: auto;
 }
-
-
-
-
 
  nav {
   -webkit-box-shadow: 0px 2px 38px 0px rgba(82, 82, 82, 0.55);
@@ -160,7 +184,8 @@ footer {
 }
 
 .welcome-button {
-    background-color: #ffffff70;
+    font-family: 'Helvetica';
+    background-color: #ffff;
     color: black;
 }
 
@@ -200,12 +225,13 @@ footer .col-3 {
   border-top: 0;
 }
 
-input {
+.post-form .form-title {
   width: 100%;
 }
 
-textarea {
+.post-form .form-text {
   width: 100%;
+  min-height: 500px;
 }
 
 nav {
@@ -236,5 +262,6 @@ footer {
 /* Button design for posts */
 .btn-post {
     background-color: white;
-    border: 1px solid black
+    border: 1px solid black;
+    color: black;
 }

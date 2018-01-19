@@ -2,20 +2,25 @@
 <br />
 <div class="container">
   <div class="row">
-    <div class="col-6 offset-3">
+    <div class="col-8 offset-2 post-form">
       <h1>Rediger innlegg</h1>
       <%= form_for @post do |f| %>
         <p>
         <%= f.label :tittel %><br />
-        <%= f.text_field :title %>
+        <%= f.text_field :title, class: "form-field form-title" %>
         </p>
 
         <p>
           <%= f.label :innlegg %><br />
-          <%= f.text_area :body %>
+          <%= f.text_area :body, class: "tinymce form-field form-text" %>
         </p>
-        <%= f.submit 'Lagre innlegg', data: {:confirm => "Er du sikker at du vil oppdatere innlegget?"}, :class => 'btn btn-primary' %>
+        <p>
+          <%= f.label :last_opp_bilde %><br>
+          <%= f.file_field :image %>
+        </p>
+        <%= f.submit 'Lagre innlegg', data: {:confirm => "Er du sikker at du vil oppdatere innlegget?"}, :class => 'btn btn-primary btn-sm btn-post' %>
       <% end %>
     </div>
   </div>
 </div>
+<%= tinymce %>

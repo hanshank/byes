@@ -16,6 +16,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require tinymce
 
 
 // Adds smooth-scroll function to the page
@@ -58,3 +59,10 @@ $( document ).ready(function() {
   }
   });
 });
+
+// Make alerts fade out gradually
+window.setTimeout(function() {
+    $(".alert, .alert-danger").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);

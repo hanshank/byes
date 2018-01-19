@@ -5,4 +5,8 @@ class AdminController < ApplicationController
   def show
   end
 
+  def destroy
+  redirect_to pages_begravelse_path
+  end
+
 end
