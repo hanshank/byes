@@ -1,0 +1,29 @@
+DB:
+
+Minnesider:
+- Navn avdøde
+- Fødselsdato avdøde
+- Dato, dødsfall
+- Sted, begravelse
+- Tidspunkt, begravelse
+- Bilde avdøde
+- Tekst avdøde
+- Kommentar
+- Bestill blomster
+
+Blomster
+- Type
+- Str
+- Pris
+- Rapportside
+  - Pris
+  -
+* Må bruke avdødes navn, sted og tidspunkt
+* Generere mail
+* F.eks: "Bestilling til #{avdødes_navn}´s båre, #{dato} kl #{tidspunkt}."
+
+
+Skriv en hilsen:
+- Navn
+- Tekst
+- Bilde

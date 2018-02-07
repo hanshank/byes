@@ -1,0 +1,27 @@
+<div class="container full-page">
+  <div class="row">
+    <div class="col">
+      <h3>Ny Minneside</h3>
+      <%= form_for @obit do |f| %>
+        <div><%= f.label :Fornavn %></div>
+        <div><%= f.text_field :f_name %></div>
+        <br>
+        <div><%= f.label :Etternavn %></div>
+        <div><%= f.text_field :l_name %></div>
+        <br>
+        <div><%= f.label :Fødselsdato %></div>
+        <div><%= f.date_select :birthday, {order: [:day, :month, :year], prompt: { day: 'Dag', month: 'Måned', year: 'År' }, start_year: Date.today.year, end_year: Date.today.year - 110}, {required: true} %></div>
+        <br>
+        <div><%= f.label :Dødsdato %></div>
+        <div><%= f.date_select :death_date, {order: [:day, :month, :year], prompt: { day: 'Dag', month: 'Måned', year: 'År' }, start_year: Date.today.year, end_year: Date.today.year - 5}, {required: true} %></div>
+        <br>
+        <div><%= f.label :Seremonisted %></div>
+        <div><%= f.select :ceremony, ['Langevåg Kirke', 'Ålesund Kirke']%></div>
+        <div><%= f.label :Bilde %></div>
+        <div><%= f.file_field :image %></div>
+        <br>
+        <div><%= f.submit 'create', class: 'btn-primary' %></div>
+      <% end %>
+    </div>
+  </div>
+</div>

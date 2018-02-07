@@ -1,0 +1,13 @@
+<div class="container main-banner">
+  <div class="row">
+      <% @obits.each do |obit| %>
+        <div class="col-4 ">
+          <%= image_tag obit.image, class: 'img-fluid' %>
+          <h3><%= "#{obit.f_name} #{obit.l_name}" %></h3>
+          <p><%= "Begravelse i fra #{obit.ceremony}" %></p>
+          <p><%= obit.death_date %></p>
+          <p><%= obit.birthday %></p>
+        </div>
+      <% end %>
+  </div>
+</div>

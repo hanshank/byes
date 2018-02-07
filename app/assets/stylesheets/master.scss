@@ -1,0 +1,58 @@
+@import "bootstrap";
+@import "font-awesome";
+
+.navbar a {
+  color: black;
+}
+
+.main-banner {
+  height: 100vh;
+}
+
+.full-page {
+    height: 100vh;
+}
+
+.top-l {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.top-c {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.top-r {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.mid-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mid-l {
+  display: flex;
+  align-items: center;
+}
+.mid-r {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.bottom-l {
+  display: flex;
+  align-items: flex-end;
+}
+.bottom-m {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.bottom-r {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-flex-end;
+}
