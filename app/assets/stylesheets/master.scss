@@ -1,16 +1,77 @@
 @import "bootstrap";
 @import "font-awesome";
 
+.btn-primary {
+  background-color: white;
+}
+
+.obit img {
+  max-width: 30%;
+  height: auto;
+}
+
+.flowers img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flowers {
+  height: 35vh;
+}
+
+.flower-banner {
+    height: 100%;
+    background-image: url(rose.jpg);
+}
+
+
+.main-container {
+  background-color: white;
+}
+
+.footer {
+  height: 100px;
+  background-color: white;
+}
+
+// .container {
+//   padding-left: 0;
+//   padding-right: 0;
+//
+// }
+
 .navbar a {
   color: black;
 }
 
-.main-banner {
-  height: 100vh;
+.navbar {
+  margin-left: 0;
 }
+
+.main-hero {
+  height: calc(100vh - 100px);
+}
+
+.main-banner {
+  height: 100%;
+  background-image: url('røde-bær.jpg');
+  background-size: cover;
+}
+
+.main-col {
+  height: 100%;
+
+}
+
+
+
 
 .full-page {
     height: 100vh;
+}
+
+.full-height {
+  height: 100%;
 }
 
 .top-l {
@@ -29,6 +90,7 @@
   align-items: flex-start;
 }
 .mid-c {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -4,4 +4,8 @@ class PagesController < ApplicationController
       @obits = Obit.all
     end
 
+    def show
+      @obit = Obit.find(params[:id])
+    end
+
 end

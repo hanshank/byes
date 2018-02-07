@@ -10,9 +10,10 @@
 
   <body>
 
+  <div class="container-fluid bg-white">
     <div class="container">
-      <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">Navbar</a>
+      <nav class="navbar navbar-expand-lg ">
+        <%= link_to 'Logo here', root_path, class: 'navbar-brand' %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,26 +38,15 @@
         </div>
       </nav>
     </div>
+  </div>
 
     <%= yield %>
 
-    <div id="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-3 text-center">
-            Hello
-          </div>
-          <div class="col-12 col-sm-3 text-center">
-            Hello
-          </div>
-          <div class="col-12 col-sm-3 text-center">
-            Hello
-          </div>
-          <div class="col-12 col-sm-3 text-center">
-            Hello
-          </div>
+      <footer class="footer">
+        <div class="container mid-c">
+          <span class="text-muted"><%= "® Byes Begravelsesbyrå #{Time.new.year}" %></span>
         </div>
-      </div>
+      </footer>
 
   </body>
 </html>

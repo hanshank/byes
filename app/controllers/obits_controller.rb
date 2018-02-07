@@ -19,10 +19,14 @@ class ObitsController < ApplicationController
     end
   end
 
+  def show
+    @obit = Obit.find(params[:id])
+  end
+
   private
 
   def obit_params
-    params.require(:obit).permit(:name, :ceremony, :image)
+    params.require(:obit).permit(:f_name, :l_name, :birthday, :death_date, :ceremony, :image)
   end
 
 end
