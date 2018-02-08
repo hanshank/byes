@@ -13,10 +13,15 @@
         <div><%= f.date_select :birthday, {order: [:day, :month, :year], prompt: { day: 'Dag', month: 'Måned', year: 'År' }, start_year: Date.today.year, end_year: Date.today.year - 110}, {required: true} %></div>
         <br>
         <div><%= f.label :Dødsdato %></div>
-        <div><%= f.date_select :death_date, {3, prompt: { day: 'Dag', month: 'Måned', year: 'År' }, start_year: Date.today.year, end_year: Date.today.year - 5}, {required: true} %></div>
+        <div><%= f.date_select :death_date, {prompt: { day: 'Dag', month: 'Måned', year: 'År' }, start_year: Date.today.year, end_year: Date.today.year - 5}, {required: true} %></div>
         <br>
         <div><%= f.label :Seremonisted %></div>
         <div><%= f.select :ceremony, ['Langevåg Kirke', 'Ålesund Kirke']%></div>
+        <div><%= f.label :Tittel %></div>
+        <div><%= f.text_field :title %></div>
+        <br>
+        <div><%= f.label :Minneord %></div>
+        <div><%= f.text_area :message %></div>
         <div><%= f.label :Bilde %></div>
         <div><%= f.file_field :image %></div>
         <br>

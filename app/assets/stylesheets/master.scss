@@ -1,13 +1,18 @@
 @import "bootstrap";
 @import "font-awesome";
 
-.btn-primary {
-  background-color: white;
+// .obits img {
+//   max-width: 30%;
+//   height: auto;
+// }
+
+.img-obit {
+  max-width: 50%;
+  height: auto;
 }
 
-.obit img {
-  max-width: 30%;
-  height: auto;
+.clear {
+  clear: both;
 }
 
 .flowers img {

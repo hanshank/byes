@@ -7,6 +7,7 @@ class ObitsController < ApplicationController
 
   def new
     @obit = Obit.new
+    @tribute = Tribute.new
   end
 
   def create
@@ -21,12 +22,18 @@ class ObitsController < ApplicationController
 
   def show
     @obit = Obit.find(params[:id])
+
+    if @tribute
+    @tribute = Tribute.find(params)
+    else
+      return "hello"
+    end
   end
 
   private
 
   def obit_params
-    params.require(:obit).permit(:f_name, :l_name, :birthday, :death_date, :ceremony, :image)
+    params.require(:obit).permit(:f_name, :l_name, :birthday, :death_date, :ceremony, :title, :message, :image)
   end
 
 end
