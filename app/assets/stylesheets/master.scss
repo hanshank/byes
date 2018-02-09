@@ -6,9 +6,67 @@
 //   height: auto;
 // }
 
+.section {
+  height: 55vh;
+}
+
+.main-nav {
+  height: 65px;
+}
+
+.banner {
+  background-image: url(flower.jpg);
+  height: 275px;
+  width: 100%;
+  background-size: cover;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.info-row {
+  height: 100%;
+}
+
+.info-box {
+  height: 60%;
+  border: solid 1px black;
+  padding: 5%;
+}
+
 .img-obit {
   max-width: 50%;
   height: auto;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.logo {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  fill: black;
+  width: auto;
+  height: 3em;
+}
+
+.navbar-brand {
+  margin: 0;
+  padding: 0;
+}
+
+.logo-holder {
+  position: relative;
+  max-height: 100%;
+}
+
+
+.obits a, .obits a:hover {
+  color: black;
+  text-decoration: none;
 }
 
 .clear {
@@ -17,18 +75,32 @@
 
 .flowers img {
   max-width: 100%;
-  height: auto;
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.flowers {
-  height: 35vh;
-}
 
 .flower-banner {
-    height: 100%;
+  width: 100%;
+  height: auto;
     background-image: url(rose.jpg);
 }
 
+.blue {
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.yellow {
+  background: url('greyzz.png');
+}
+
+.green {
+  background: url('greyzz.png');;
+}
 
 .main-container {
   background-color: white;
@@ -53,13 +125,36 @@
   margin-left: 0;
 }
 
+.main-main{
+  height: calc(100vh - 65px);
+  padding: 0;
+}
+
 .main-hero {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 130px);
 }
 
 .main-banner {
   height: 100%;
   background-image: url('røde-bær.jpg');
+  background-size: cover;
+}
+
+.etter-begravelsen {
+  height: 100%;
+  background-image: url('gren.jpg');
+  background-size: cover;
+}
+
+.til-begravelsen {
+  height: 100%;
+  background-image: url('busk-dekket-i-snø.jpg');
+  background-size: cover;
+}
+
+.om-oss {
+  height: 100%;
+  background-image: url('vinter.jpg');
   background-size: cover;
 }
 
@@ -69,7 +164,10 @@
 }
 
 
-
+.align-c {
+  display: flex;
+  align-items: center;
+}
 
 .full-page {
     height: 100vh;
@@ -95,7 +193,6 @@
   align-items: flex-start;
 }
 .mid-c {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,4 +219,27 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-flex-end;
+}
+
+.vert-mid {
+  display: flex;
+  align-items: center;
+}
+
+.page-box {
+  border: solid 1.5px black;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.banner-background {
+  height: calc(100vh - 65px);
+  background: white;
+  padding: 0;
+}
+
+.btn-main {
+  background-color: none;
+  border: solid 2px black;
+  padding: 5px;
 }

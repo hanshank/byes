@@ -1,5 +1,5 @@
 
-  <div class="container-fluid main-hero">
+  <div class="container-fluid  main-hero">
     <div class="row full-height main-banner">
       <div class="col main-col mid-c full-height">
         <div class="box">
@@ -11,37 +11,92 @@
       </div>
     </div>
   </div>
-  <br>
-  <br>
 
-<div class="container-fluid main-container">
-  <div class="container obits">
-    <h1>Minnesider</h1>
+<div class="container-fluid">
+  <div class="container section">
+    <div class="row info-row align-c">
+
+      <div class="col-sm-6 col-md-3 text-center">
+        <div class="info-box">
+          <h5>Når et dødsfall inntreffer</h5>
+          <div class="info-img">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <button class="btn-main">Noe her</button>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3 text-center">
+        <div class="info-box">
+          <h5>Tittel</h5>
+          <div class="info-img">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <button class="btn-main">Noe her</button>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3 text-center">
+        <div class="info-box">
+          <h5>Tittel</h5>
+          <div class="info-img">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <button class="btn-main">Noe her</button>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3 text-center">
+        <div class="info-box">
+          <h5>Tittel</h5>
+          <div class="info-img">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <button class="btn-main">Noe her</button>
+        </div>
+      </div>
+
+    </div>   <!-- row -->
+  </div>  <!-- container -->
+</div>  <!-- container-fluid -->
+
+<div class="container-fluid">
+  <div class="container obits section align-c">
+
     <div class="row">
-        <% @obits.each do |obit| %>
-          <div class="col-sm-12 col-md-3 ">
+        <div class="col-sm-12 text-center">
+          <h1 class="text-center"><%= link_to 'Minnesider', obits_path, class: 'text-center link' %></h1>
+          <br>
+          <br>
+        </div>
+        <% @obits.limit(4).each do |obit| %>
+          <div class="col-sm-12 col-md-3">
             <div>
               <%= link_to obit_path(obit) do %>
                   <%= image_tag obit.image, class: "img-fluid" %>
               <% end %>
             </div>
-            <h3><%= "#{obit.f_name} #{obit.l_name}" %></h3>
-            <p><%= "#{obit.birthday} - #{obit.death_date}" %></p>
+            <h5 style="margin-top:3px;"><%= "#{obit.f_name} #{obit.l_name}" %></h5>
+            <p style="font-size:12px;"><%= "#{obit.birthday} - #{obit.death_date}" %></p>
             <p><%=  %></p>
           </div>
         <% end %>
     </div>
   </div>
+</div>
 
-  <div class="container flowers">
-    <div class="row full-height">
-      <div class="col mid-c full-height flower-banner">
-        <div class="box">
-          <h1>Si farvel med blomster</h1>
-          <p>Få blomster sendt direkte til begravelsen. </p>
-          <p>Du kan også sende blomster til hjemmet.</p>
-          <p>Enklere blir det ikke!</p>
-          <button class="btn">Bestill nå</button>
+<div class="container-fluid ">
+  <div class="container section align-c">
+    <div class="row full-width full-height">
+      <div class="col-sm-12 mid-c full-width">
+        <div class="banner mid-c">
+          <div class="box">
+            <h1>Bestill blomster til begravelsen</h1>
+            <p>Få blomster sendt direkte til begravelsen. </p>
+            <p>Du kan også sende blomster til hjemmet.</p>
+            <p>Enklere blir det ikke!</p>
+            <button class="btn">Bestill nå</button>
+          </div>
         </div>
       </div>
     </div>

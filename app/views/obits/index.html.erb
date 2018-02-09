@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <% @obits.each do |obit| %>
+      <div class="col-3">
+        <h4><%= "#{obit.f_name} #{obit.l_name}" %></h4>
+        <%= link_to obit_path(obit) do %>
+            <%= image_tag obit.image, class: "img-fluid" %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

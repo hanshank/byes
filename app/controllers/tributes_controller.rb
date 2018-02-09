@@ -14,7 +14,7 @@ class TributesController < ApplicationController
     return render_not_found if @obit.blank?
 
     @obit.tributes.create(tribute_params)
-    redirect_to root_path
+    redirect_to obit_path(@obit)
   end
 
   def tribute_params

@@ -8,4 +8,19 @@ class PagesController < ApplicationController
       @obit = Obit.find(params[:id])
     end
 
+    def etter_begravelsen
+    end
+
+    def om_oss
+    end
+
+    def til_begravelsen
+    end
+
+    def kontakt
+    end
+
+    def tjenester
+    end
+
 end

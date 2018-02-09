@@ -2,7 +2,7 @@ class ObitsController < ApplicationController
 
   def index
     @obits = Obit.all
-    @obits = Obit.find.all(obit_params[:id])
+
   end
 
   def new

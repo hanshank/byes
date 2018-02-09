@@ -11,7 +11,7 @@
       <br>
     </div>
     <div class="col-xs-12 col-md-4">
-      <h3><%= "#{@obit.f_name} #{@obit.l_name}" %></h3>
+      <h2><%= "#{@obit.f_name} #{@obit.l_name}" %></h2>
       <h6><%= "#{@obit.birthday} - #{@obit.death_date}" %></h6>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
@@ -22,25 +22,26 @@
   </div>
 
   <br>
-  <br>
   <div class="greetings">
     <h2>Minneord</h2>
 
     <div class="row">
-      <% @obit.tributes.each do |tributes| %>
-        <div class="col-sm-12">
-          <h5><%= tributes.name %></h5>
-          <p><%= tributes.tribute %></p>
+      <% @obit.tributes.each do |tribute| %>
+        <div class="col-sm-12 tribute-box">
+          <p><%= tribute.tribute %></p>
+          <h6><%= "#{tribute.name} #{tribute.created_at.strftime("%d-%m-%Y")}" %></h6>
         </div>
       <% end %>
     </div>
   </div>
 
+  <br>
+
   <div class="greetings">
     <div class="row">
       <div class="col">
         <h4>Skriv et minneord</h4>
-          <%= form_for Tribute.new, url: obit_tributes_path(@obit) do |f| %>
+          <%= form_for(Tribute.new, url: obit_tributes_path(@obit), html: {class: "tribute-form"}) do |f| %>
             <div><%= f.label 'Ditt navn' %></div>
             <div><%= f.text_field :name %></div>
             <div><%= f.label 'Minneord' %></div>

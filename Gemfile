@@ -57,3 +57,5 @@ gem "font-awesome-rails"
 gem 'jquery-rails'
 
 gem 'carrierwave', '~> 1.0'
+
+gem 'inline_svg'
