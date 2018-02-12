@@ -15,3 +15,18 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+$(document).ready(function(){
+  $(document).scroll(function(){
+    const scroll_pos = $(this).scrollTop();
+    const top_nav_height = $( '.top-nav' ).outerHeight();
+    const main_nav_height = $( '.main-nav' ).outerHeight;
+    if(scroll_pos > top_nav_height) {
+      $( '.main-nav' ).addClass( 'fixed-top bg-white' );
+      $( 'body').css("margin-top","60px" );
+    } else {
+        $( '.main-nav' ).removeClass( 'fixed-top' );
+        $( 'body').css("margin-top","" );
+    }
+  });
+});

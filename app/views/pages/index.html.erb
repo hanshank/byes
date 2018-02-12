@@ -1,73 +1,78 @@
-
-  <div class="container-fluid  main-hero">
+<div class="container-fluid banner-background">
+  <div class="container-fluid main-hero">
     <div class="row full-height main-banner">
       <div class="col main-col mid-c full-height">
-        <div class="box">
-          <h1>Velkommen til oss</h1>
-          <p>Vi er totalleverandør innen begravelse</p>
-          <p>Hos oss vil du bli tatt vare på med respekt og verdighet</p>
-          <button class="btn">Se begravelse</button>
+        <div class="box text-center">
+          <h1>Omsorg ved livets slutt</h1>
+          <p>Vi er totalleverandør innen begravelse. Hos oss vil du</p>
+          <p> bli tatt vare på med respekt og verdighet</p>
+          <%= button_to "Ta kontakt", kontakt_path, :method => 'get', class: 'btn-main' %>
         </div>
       </div>
     </div>
   </div>
+</div>
+<br>
 
+  <div class="container-fluid" id="begravelse">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="page-box">
+            <h5>Seremoni</h5>
+            <div class="info-img">
+              <%= image_tag 'church.jpg', class: 'img-fluid' %>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="btn-main full-width">Les mer</button>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="page-box">
+            <h5>Blomster</h5>
+            <div class="info-img">
+              <%= image_tag 'boquet.jpg', class: 'img-fluid' %>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="btn-main full-width">Les mer</button>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="page-box">
+            <h5>Seremoni</h5>
+            <div class="info-img">
+              <%= image_tag 'church.jpg', class: 'img-fluid' %>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="btn-main full-width">Les mer</button>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="page-box">
+            <h5>Blomster</h5>
+            <div class="info-img">
+              <%= image_tag 'boquet.jpg', class: 'img-fluid' %>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="btn-main full-width">Les mer</button>
+          </div>
+        </div>
+
+      </div>   <!-- row -->
+    </div>  <!-- container -->
+  </div>  <!-- container-fluid -->
+<br><br><br>
 <div class="container-fluid">
   <div class="container section">
-    <div class="row info-row align-c">
-
-      <div class="col-sm-6 col-md-3 text-center">
-        <div class="info-box">
-          <h5>Når et dødsfall inntreffer</h5>
-          <div class="info-img">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <button class="btn-main">Noe her</button>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-3 text-center">
-        <div class="info-box">
-          <h5>Tittel</h5>
-          <div class="info-img">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <button class="btn-main">Noe her</button>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-3 text-center">
-        <div class="info-box">
-          <h5>Tittel</h5>
-          <div class="info-img">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <button class="btn-main">Noe her</button>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-3 text-center">
-        <div class="info-box">
-          <h5>Tittel</h5>
-          <div class="info-img">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <button class="btn-main">Noe her</button>
-        </div>
-      </div>
-
-    </div>   <!-- row -->
-  </div>  <!-- container -->
-</div>  <!-- container-fluid -->
-
-<div class="container-fluid">
-  <div class="container obits section align-c">
 
     <div class="row">
         <div class="col-sm-12 text-center">
           <h1 class="text-center"><%= link_to 'Minnesider', obits_path, class: 'text-center link' %></h1>
           <br>
-          <br>
+
         </div>
         <% @obits.limit(4).each do |obit| %>
           <div class="col-sm-12 col-md-3">
@@ -85,20 +90,20 @@
   </div>
 </div>
 
-<div class="container-fluid ">
-  <div class="container section align-c">
-    <div class="row full-width full-height">
-      <div class="col-sm-12 mid-c full-width">
-        <div class="banner mid-c">
-          <div class="box">
-            <h1>Bestill blomster til begravelsen</h1>
-            <p>Få blomster sendt direkte til begravelsen. </p>
-            <p>Du kan også sende blomster til hjemmet.</p>
-            <p>Enklere blir det ikke!</p>
-            <button class="btn">Bestill nå</button>
+<br>
+<br>
+
+  <div class="container section">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="flower-banner d-flex align-items-center justify-content-end">
+          <div class="flower-text ">
+            <h1>Kjøp blomster til begravelsen</h1>
+            <p>En siste hilsen med blomster kan bety mer enn tusen ord.<p>
+            <p>Få blomster sendt direkte til begravelsen eller til hjemmet</p>
+            <button class="btn-main btn-banner">Bestill nå</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>

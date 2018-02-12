@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <% form_for @obit.each do |f| %>
+      <%= f.text_field :title %>
+      <% end %>
+    </div>
+  </div>
+</div>

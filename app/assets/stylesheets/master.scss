@@ -6,8 +6,25 @@
 //   height: auto;
 // }
 
+.dropdown-toggle::after {
+    display:none
+}
+
+.top-nav {
+  background-color: #8d8d8df2;
+}
+
+.top-nav a  {
+  color: white;
+}
+
 .section {
   height: 55vh;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
 }
 
 .main-nav {
@@ -50,7 +67,7 @@
   margin: 0 auto;
   fill: black;
   width: auto;
-  height: 3em;
+  height: 3.5em;
 }
 
 .navbar-brand {
@@ -82,9 +99,13 @@
 
 
 .flower-banner {
-  width: 100%;
-  height: auto;
-    background-image: url(rose.jpg);
+  background-size: cover;
+  height: 420px;
+    background-image: url(flower.jpg);
+}
+
+.flower-text {
+  padding: 40px;
 }
 
 .blue {
@@ -126,12 +147,12 @@
 }
 
 .main-main{
-  height: calc(100vh - 65px);
+  height: calc(100vh - 60px);
   padding: 0;
 }
 
 .main-hero {
-  height: calc(100vh - 130px);
+  height: calc(100vh - 190px);
 }
 
 .main-banner {
@@ -227,7 +248,8 @@
 }
 
 .page-box {
-  border: solid 1.5px black;
+  border: solid 1px #dedede87;
+  box-shadow: 5px 10px #888888;
   padding: 15px;
   margin-bottom: 25px;
 }
@@ -239,7 +261,11 @@
 }
 
 .btn-main {
-  background-color: none;
-  border: solid 2px black;
-  padding: 5px;
+  background-color: #ffffff96;
+  border: solid 1px black;
+  padding: 10px 25px;
 }
+
+// .btn-banner {
+//   margin-top: 10px;
+// }
