@@ -34,48 +34,40 @@
                   Ved dødsfall
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#">Akkut hjelp ved dødsfall</a>
+                  <a class="dropdown-item" href="#">Henting av avdøde</a>
+                  <a class="dropdown-item" href="#">Priser</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <%= link_to 'Til begravelsen', til_begravelsen_path, class: 'nav-link dropdown-toggle', data: { toggle: 'dropdown'} %>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Seremoni</a>
+                  <a class="dropdown-item" href="#">Blomster</a>
+                  <a class="dropdown-item" href="#">Kister</a>
+                  <a class="dropdown-item" href="#">Urner</a>
+                  <a class="dropdown-item" href="#">Musikk</a>
+                  <a class="dropdown-item" href="#">Transport</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Begravelse
+                  Informasjon
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#">Avdødes digitale liv</a>
+                  <a class="dropdown-item" href="#">Minnesider</a>
+                  <a class="dropdown-item" href="#">Blogg</a>
+                  <a class="dropdown-item" href="#">Arv og skifte</a>
+                  <a class="dropdown-item" href="#">Priser</a>
                 </div>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Tjenester
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Om oss
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Kontakt
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                <li class="nav-item">
+                  <%= link_to 'Om oss', om_oss_path, class: 'nav-link' %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'Kontakt', kontakt_path, class: 'nav-link' %>
+                </li>
             </ul>
           </div>
         </nav>
