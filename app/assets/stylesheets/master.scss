@@ -6,6 +6,8 @@
 //   height: auto;
 // }
 
+input, textarea { display: block; }
+
 .dropdown-toggle::after {
     display:none
 }

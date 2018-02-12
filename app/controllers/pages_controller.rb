@@ -23,4 +23,7 @@ class PagesController < ApplicationController
     def tjenester
     end
 
+    def ved_dodsfall
+    end
+
 end
