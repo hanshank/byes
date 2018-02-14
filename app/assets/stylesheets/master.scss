@@ -1,0 +1,302 @@
+@import "bootstrap";
+
+
+/* IMPORTED */
+
+.main-main{
+  height: calc(100vh - 60px);
+  padding: 0;
+}
+
+.main-hero {
+  height: calc(100vh - 190px);
+}
+
+.main-banner {
+  height: 100%;
+  background-image: url('røde-bær.jpg');
+  background-size: cover;
+}
+
+.banner-background {
+  height: calc(100vh - 65px);
+  background: white;
+  padding: 0;
+}
+
+.btn-main {
+  background-color: #ffffff96;
+  border: solid 1px black;
+  padding: 10px 25px;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.main-col {
+  height: 100%;
+}
+
+.section {
+  height: 55vh;
+}
+
+/* STILL IMPORTED */
+
+
+.footer {
+  height: 100px;
+  background-color: white;
+}
+
+
+
+ .navbar {
+   min-height: 80px;
+ }
+
+ svg {
+   height: 130px;
+   width: auto;
+   position: absolute;
+   position: absolute;
+   left: 50%;
+   -webkit-transform: translateX(-50%);
+   transform: translateX(-50%);
+   top: 2px;
+ }
+
+.navbar-small {
+  height: 30px;
+}
+
+.push-down {
+  margin-bottom: 30px;
+}
+
+ .nav-item {
+   text-transform: uppercase;
+ }
+
+/* TEST */
+
+/* adds some margin below the link sets  */
+.navbar .dropdown-menu div[class*="col"] {
+   margin-bottom:1rem;
+}
+
+.navbar .dropdown-menu {
+  border:none;
+}
+
+/* adds color and padding to dropdown menu items */
+
+.dropdown-col .nav-item  {
+  color: green !important;
+  padding: 0 !important;
+}
+
+.dropdown-col .nav-link-title  {
+  color: black !important;
+  text-transform: uppercase !important;
+}
+
+.dropdown-col .nav-link  {
+  color: black !important;
+  text-transform: none;
+}
+
+
+
+/* breakpoint and up - mega dropdown styles */
+@media screen and (min-width: 992px) {
+
+  /* remove the padding from the navbar so the dropdown hover state is not broken */
+.navbar {
+  padding-top:0px;
+  padding-bottom:0px;
+}
+
+/* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+.navbar .nav-item {
+  padding:.5rem .5rem;
+  margin:0 .25rem;
+}
+
+/* makes the dropdown full width  */
+.navbar .dropdown {
+  position:static;
+}
+
+.navbar .dropdown-menu {
+  width:100%;
+  left:0;
+  right:0;
+/*  height of nav-item  */
+  top:45px;
+}
+
+  .navbar .dropdown-menu {
+    border: 1px solid rgba(0,0,0,.15);
+    background-color: #fff;
+  }
+
+}
+
+/* TEST END */
+
+ .hero {
+   height: calc(100vh - 80px);
+   background-size: cover;
+ }
+
+ .homepage {
+   background-image: url('snowy-bushes.jpg');
+ }
+
+.hjelp {
+  background-image: url('snow-on-flower.jpg');
+}
+
+.til-begravelsen {
+  background-image: url('snowy-bushes.jpg');
+}
+
+.etter-begravelsen {
+  background-image: url('red-berries.jpg');
+}
+
+.om-oss{
+  background-image: url('winter-nature.jpg');
+}
+
+.sales {
+  height: 50vh;
+}
+
+footer {
+  background-image: url('debut-light.png') !important;
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+ nav {
+  -webkit-box-shadow: 0px 2px 38px 0px rgba(82, 82, 82, 0.55);
+  -moz-box-shadow: 0px 2px 38px 0px rgba(82, 82, 82, 0.55);
+  box-shadow: 0px 2px 38px 0px rgba(82, 82, 82, 0.55);
+ }
+
+
+
+// .navbar-brand {
+//   position: relative !important;
+// }
+//
+.logo {
+//   height: auto;
+//   width: 100%;
+  height: 40px;
+}
+
+.intro-section {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.welcome-button {
+    font-family: 'Helvetica';
+    background-color: #ffff;
+    color: black;
+}
+
+footer {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+footer a {
+  color: black;
+}
+
+footer .col-3 {
+  justify-content: center;
+}
+
+.page-menu a {
+  color: black;
+}
+
+.page-menu {
+  justify-content: center;
+  z-index: 100000;
+  -webkit-box-shadow: 0px 2px 17px 1px rgb(226, 226, 226);
+  -moz-box-shadow: 0px 2px 17px 1px rgb(226, 226, 226);
+  box-shadow: 0px 2px 17px 1px rgb(226, 226, 226);
+}
+
+
+.sticky {
+  position: fixed;
+  visibility: visible;
+  z-index: 100000;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-top: 0;
+}
+
+.post-form .form-title {
+  width: 100%;
+}
+
+.post-form .form-text {
+  width: 100%;
+  min-height: 500px;
+}
+
+nav {
+  position: fixed;
+}
+
+.down-arrow {
+  color: black;
+  font-size: 35px;
+  text-align: center;
+}
+
+.add-margin {
+  margin-top: 56px;
+}
+
+.mid-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/* Button design for posts */
+.btn-post {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
