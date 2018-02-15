@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'pages/begravelse'
 
   get 'pages/etter_begravelsen'
+  get 'pages/seremoni'
 
   get 'pages/om_oss'
 

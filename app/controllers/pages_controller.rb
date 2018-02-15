@@ -13,4 +13,7 @@ class PagesController < ApplicationController
 
   def om_oss
   end
+
+
+
 end

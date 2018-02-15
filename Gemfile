@@ -68,3 +68,5 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 
 gem 'tinymce-rails'
+
+gem 'inline_svg'

@@ -16,12 +16,9 @@
     <script>
     $(document).ready(function() {
 
-      var button = $('#button');
-      button.click(function() {
-        $( ".navbar-brand" ).css( "border", "5px solid black" );
-      });
 
-    });
+
+
 
 
       // breakpoint and up
@@ -65,28 +62,42 @@
           </div>
       </header>
     <% end %>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
 
-      <%= svg 'logo' %>
+    <div class="top-nav d-flex align-items-center justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to 'Åpen tlf 24/7 - 70 12 12 55', root_path, class: 'nav-link' %>
+        </li>
+      </ul>
+    </div>
+
+  <div class="main-nav container-fluid">
+    <nav class="navbar navbar-expand-lg container navbar-light bg-white">
+
+      <div class="logo-holder navbar-brand">
+        <%= link_to root_path do %>
+          <%= inline_svg "logo.svg", class: 'logo' %>
+        <% end %>
+      </div>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <%= link_to '70 12 12 55', posts_path, class: 'nav-link active' %>
-          </li>
-        </ul>
+
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <%= link_to 'Blogg', posts_path, class: 'nav-link active' %>
+            <%= link_to 'Ved dødsfall', pages_hjelp_ved_dodsfall_path, class: 'nav-link active' %>
           </li>
           <li class="nav-item">
-            <%= link_to 'Minnesider', 'https://bye.vareminnesider.no', class: 'nav-link active' %>
+            <%= link_to 'Til begravelsen', pages_begravelse_path, class: 'nav-link active' %>
           </li>
           <li class="nav-item">
-            <%= link_to 'Kontakt', pages_om_oss_path, class: 'nav-link active' %>
+            <%= link_to 'Etter begravelsen', pages_etter_begravelsen_path, class: 'nav-link active' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Om oss', pages_om_oss_path, class: 'nav-link active' %>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -192,9 +203,8 @@
           </li>
         </ul>
       </div>
-
-
-</nav>
+    </nav>
+</div>
 
 <% if notice.present? %>
   <p class="alert alert-info"><%= notice %></p>
