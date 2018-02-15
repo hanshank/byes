@@ -13,22 +13,22 @@
 
 <div class="navbar navbar-expand-lg bg-white page-menu fixed smooth-scroll" id="page-menu">
   <ul class="navbar-nav test" id="menu">
-    <li class="nav-item">
+    <li class="nav-item active-item" id="seremoni-item">
       <span class="nav-link pointer" id="seremoni-link">Seremoni</span>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="blomster-item">
       <span class="nav-link pointer" id="blomster-link">Blomster</span>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="kister-item">
       <span class="nav-link pointer" id="kister-link">Kister</span>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="urner-item">
       <span class="nav-link pointer" id="urner-link">Urner</span>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="musikk-item">
       <span class="nav-link pointer" id="musikk-link">Musikk</span>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="transport-item">
       <span class="nav-link pointer" id="transport-link">Transport</span>
     </li>
   </ul>
@@ -37,7 +37,7 @@
 <br />
 
 <div class="container begravelse-content">
-    <div class="container" id="seremoni">
+    <div class="container tab" id="seremoni">
       <div class="row">
         <div class="col-8 offset-2">
           <h1>Seremoni</h1>
@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <div class="container hide" id="blomster">
+    <div class="container hide tab" id="blomster">
       <div class="row">
         <div class="col-8 offset-2">
           <h1>Blomster</h1>
@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <div class="container hide" id="kister">
+    <div class="container hide tab" id="kister">
       <div class="row">
         <div class="col-8 offset-2">
           <h1>Kister</h1>
@@ -84,30 +84,36 @@
       </div>
     </div>
 
-    <div class="container hide" id="urner">
+    <div class="container hide tab" id="urner">
       <div class="row">
         <div class="col-8 offset-2">
           <h1>Urner</h1>
           <%= image_tag 'hvit-urne.jpg', class: 'img-fluid' %>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Vi har en rekke flotte urner som representerer hvem den avdøde var betydde for andre. Urnene er laget med tanke på hurtigst mulig nedbryting i jorden. Man kan også få urne i bioorganisk, forgjengelig materiale. Med en slik type urne vil nedbrytningsprosessen begynne med en gang urnen senkes ned i jorden.</p>
         </div>
       </div>
     </div>
 
-    <div class="container hide" id="musikk">
+    <div class="container hide tab" id="musikk">
       <div class="row">
         <div class="col-8 offset-2">
           <h1>Musikk</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Mens blomster bidrar til det visuelle, kan musikken skape en helt spesiell atmosfære i en begravelsesseremoni. Spesielt kan musikk være viktig når avdøde selv hadde et sterkt forhold til musikk. Vi har et stort nettverk av lokale og noen nasjonale artister av høyt nivå. Vi mener at alle fortjener en verdig og minnerik gravferd, og musikken kan bidra til å oppnå nettopp dette.</p>
+          <h4>Salmer</h4>
+          <p>Velger man en kristelig begravelse gjennom “Den Norske Kirke” er det som oftest påkrevd å velge tre eller fire salmer som “allsang”. Det er opp til pårørende å velge hvilke salmer de ønsker å bruke i seremonien. Eksempler på salmer som er mye brukt i gravferd:</p>
+          <p>Du kan se alternativ til salmer <a href="#">her</a></p>
+          <h4>Solist</h4>
+          <p>Å få inn en solist og/eller musikere er et flott komplement til gravferden. Vi har et stort nettverk av artister som gjerne vil bidra til å skape en verdig avskjed for din kjære enten ved sang, trompet, fiolin etc. Ut fra hvilken type seremoni dere ønsker kan vi planlegge musikkinnslagene i seremonien. Vi vil sammen sette opp et program og velge sanger som er ønsket og egnet.</p>
         </div>
       </div>
     </div>
 
-    <div class="container hide" id="transport">
+    <div class="container hide tab" id="transport">
       <div class="row">
         <div class="col-8 offset-2">
           <h1>Transport</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Vi mener at alle fortjener ydmyk respekt og verdig behandling, også etter sin bortgang. Som en del av våre tjenester transporterer vi den avdøde til sykehus eller annet tilsvarende sted for å ivareta den avdøde frem til begravelsesseremonien. Det er viktig for oss å kunne tilby tjenester med utstyr av høy kvalitet. Vi har derfor to ulike transportkjøretøy av høy standard i hvit og svart. Har du en spesiell preferanse kan du gjerne nevne dette for oss.</p>
+          <%= image_tag 'biler.jpg', class: 'img-fluid' %>
         </div>
       </div>
     </div>
@@ -145,71 +151,113 @@ $(document).ready(function() {
       $(document).ready(function(){
 
         const seremoniLink = document.getElementById('seremoni-link');
+        const seremoniItem = document.getElementById('seremoni-item');
         const seremoni = document.getElementById('seremoni');
 
         const blomsterLink = document.getElementById('blomster-link');
+        const blomsterItem = document.getElementById('blomster-item');
         const blomster = document.getElementById('blomster');
 
         const kisterLink = document.getElementById('kister-link');
+        const kisterItem = document.getElementById('kister-item');
         const kister = document.getElementById('kister');
 
         const urnerLink = document.getElementById('urner-link');
+        const urnerItem = document.getElementById('urner-item');
         const urner = document.getElementById('urner');
 
         const musikkLink = document.getElementById('musikk-link');
+        const musikkItem = document.getElementById('musikk-item');
         const musikk = document.getElementById('musikk');
 
         const transportLink = document.getElementById('transport-link');
+        const transportItem = document.getElementById('transport-item');
         const transport = document.getElementById('transport');
 
 
         seremoniLink.onclick = function() {
           seremoni.classList.remove("hide");
+          seremoniItem.classList.add("active-item");
           blomster.classList.add("hide");
+          blomsterItem.classList.remove("active-item");
           kister.classList.add("hide");
+          kisterItem.classList.remove("active-item");
           urner.classList.add("hide");
+          urnerItem.classList.remove("active-item");
           musikk.classList.add("hide");
+          musikkItem.classList.remove("active-item");
           transport.classList.add("hide");
+          transportItem.classList.remove("active-item");
         }
         blomsterLink.onclick = function() {
           seremoni.classList.add("hide");
+          seremoniItem.classList.remove("active-item");
           blomster.classList.remove("hide");
+          blomsterItem.classList.add("active-item");
           kister.classList.add("hide");
+          kisterItem.classList.remove("active-item");
           urner.classList.add("hide");
+          urnerItem.classList.remove("active-item");
           musikk.classList.add("hide");
+          musikkItem.classList.remove("active-item");
           transport.classList.add("hide");
+          transportItem.classList.remove("active-item");
         }
         kisterLink.onclick = function() {
           seremoni.classList.add("hide");
+          seremoniItem.classList.remove("active-item");
           blomster.classList.add("hide");
+          blomsterItem.classList.remove("active-item");
           kister.classList.remove("hide");
+          kisterItem.classList.add("active-item");
           urner.classList.add("hide");
+          urnerItem.classList.remove("active-item");
           musikk.classList.add("hide");
+          musikkItem.classList.remove("active-item");
           transport.classList.add("hide");
+          transportItem.classList.remove("active-item");
         }
         urnerLink.onclick = function() {
           seremoni.classList.add("hide");
+          seremoniItem.classList.remove("active-item");
           blomster.classList.add("hide");
+          blomsterItem.classList.remove("active-item");
           kister.classList.add("hide");
+          kisterItem.classList.remove("active-item");
           urner.classList.remove("hide");
+          urnerItem.classList.add("active-item");
           musikk.classList.add("hide");
+          musikkItem.classList.remove("active-item");
           transport.classList.add("hide");
+          transportItem.classList.remove("active-item");
         }
         musikkLink.onclick = function() {
           seremoni.classList.add("hide");
+          seremoniItem.classList.remove("active-item");
           blomster.classList.add("hide");
+          blomsterItem.classList.remove("active-item");
           kister.classList.add("hide");
+          kisterItem.classList.remove("active-item");
           urner.classList.add("hide");
+          urnerItem.classList.remove("active-item");
           musikk.classList.remove("hide");
+          musikkItem.classList.add("active-item");
           transport.classList.add("hide");
+          transportItem.classList.remove("active-item");
         }
         transportLink.onclick = function() {
           seremoni.classList.add("hide");
+          seremoniItem.classList.remove("active-item");
           blomster.classList.add("hide");
+          blomsterItem.classList.remove("active-item");
           kister.classList.add("hide");
+          kisterItem.classList.remove("active-item");
           urner.classList.add("hide");
+          urnerItem.classList.remove("active-item");
           musikk.classList.add("hide");
+          musikkItem.classList.remove("active-item");
           transport.classList.remove("hide");
+          transportItem.classList.add("active-item");
         }
       })
 

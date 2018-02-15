@@ -2,16 +2,68 @@
 
 .pointer {cursor: pointer;}
 
+.begravelse-content .tab {
+    animation: fadein 0.7s;
+    -moz-animation: fadein 0.7s; /* Firefox */
+    -webkit-animation: fadein 0.7s; /* Safari and Chrome */
+    -o-animation: fadein 0.7s; /* Opera */
+}
+
+.main-box {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .hide {
   display: none;
 }
 
-// .begravelse-content {
-//   height: 100vh;
-// }
+.active-item {
+  background: #8d8d8d57;
+}
+
+.begravelse-content {
+  min-height: 100vh;
+}
 
 /* IMPORTED */
+
 
 .main-main{
   height: calc(100vh - 60px);
@@ -19,7 +71,7 @@
 }
 
 .main-hero {
-  height: calc(100vh - 180px);
+  height: calc(100vh - 150px);
 }
 
 .main-banner {
@@ -36,8 +88,16 @@
 
 .btn-main {
   background-color: #ffffff96;
+  color: #000;
+  text-decoration: none;
   border: solid 1px black;
   padding: 10px 25px;
+}
+
+.btn-main:hover {
+  background-color: #ffffff50;
+  text-decoration: none;
+  color: #000;
 }
 
 .full-height {
@@ -91,7 +151,12 @@
 
 
  .navbar {
-   height: 60px;
+   height: 50px;
+ }
+
+ .main-nav {
+   padding-top: 5px;
+   padding-bottom: 5px;
  }
 
  svg {
@@ -275,8 +340,8 @@ footer .col-3 {
 }
 
 .page-menu {
+  height: 55px;
   justify-content: center;
-  z-index: 100000;
   -webkit-box-shadow: 0px 2px 17px 1px rgb(226, 226, 226);
   -moz-box-shadow: 0px 2px 17px 1px rgb(226, 226, 226);
   box-shadow: 0px 2px 17px 1px rgb(226, 226, 226);
