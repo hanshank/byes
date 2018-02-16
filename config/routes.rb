@@ -1,17 +1,11 @@
 Rails.application.routes.draw do
   devise_for :admins
-  get 'pages/hjelp_ved_dodsfall'
-  get 'pages/begravelse'
-
-  get 'pages/etter_begravelsen'
-  get 'pages/seremoni'
-
-  get 'pages/om_oss'
-
-  get 'welcome/homepage'
-
+  get 'ved_dodsfall' => 'pages#ved_dodsfall'
+  get 'til_begravelsen' => 'pages#begravelse'
+  get 'etter_begravelsen' => 'pages#etter_begravelsen'
+  get 'seremoni' => 'pages#seremoni'
+  get 'om_oss' => 'pages#om_oss'
   get 'dashboard/index'
-
   root 'pages#homepage'
 
   resources :posts

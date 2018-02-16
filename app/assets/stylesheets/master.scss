@@ -1,8 +1,50 @@
 @import "bootstrap";
 
+
+/* TAB */
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab li:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab li.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    border-top: none;
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+}
+
+
 .pointer {cursor: pointer;}
 
-.begravelse-content .tab {
+.tab-content {
     animation: fadein 0.7s;
     -moz-animation: fadein 0.7s; /* Firefox */
     -webkit-animation: fadein 0.7s; /* Safari and Chrome */
@@ -58,7 +100,7 @@
   background: #8d8d8d57;
 }
 
-.begravelse-content {
+.page-content {
   min-height: 100vh;
 }
 
@@ -92,6 +134,11 @@
   text-decoration: none;
   border: solid 1px black;
   padding: 10px 25px;
+}
+
+.btn-main a {
+  color: black;
+  text-decoration: none;
 }
 
 .btn-main:hover {
@@ -398,38 +445,4 @@ nav {
     background-color: white;
     border: 1px solid black;
     color: black;
-}
-
-
-
-
-
-
-
-ul.tabs{
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-}
-ul.tabs li{
-  background: none;
-  color: #222;
-  display: inline-block;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-ul.tabs li.current{
-  // background: #ededed;
-  color: #222;
-}
-
-.tab-content{
-  display: none;
-  // background: #ededed;
-  padding: 15px;
-}
-
-.tab-content.current{
-  display: inherit;
 }

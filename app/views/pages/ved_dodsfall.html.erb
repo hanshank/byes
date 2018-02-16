@@ -1,0 +1,118 @@
+<div class="container-fluid hero hjelp">
+  <div class="container message">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>Ved dødsfall</h1>
+        <br />
+        <button class="btn-main"><a href="#page-menu">Les mer <i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Tab links -->
+  <div class="navbar navbar-expand-lg bg-white page-menu fixed smooth-scroll tab" id="page-menu">
+    <ul class="navbar-nav test" id="menu">
+      <li class="nav-item" id="seremoni-item">
+        <span class="nav-link pointer tablinks" onclick="openPage(event, 'Hjemmet')" id="defaultOpen">Hjemmet</span>
+      </li>
+      <li class="nav-item" id="blomster-item">
+        <span class="nav-link tablinks" onclick="openPage(event, 'Institusjon')">Institusjon</span>
+      </li>
+      <li class="nav-item" id="kister-item">
+        <span class="nav-link tablinks" onclick="openPage(event, 'Utlandet')">Utlandet</span>
+      </li>
+      <li class="nav-item" id="urner-item">
+        <span class="nav-link tablinks" onclick="openPage(event, 'Annet')">Annet</span>
+      </li>
+    </ul>
+  </div>
+
+<br><br>
+<div class="container page-content">
+  <div class="row">
+
+      <!-- Tab content -->
+
+    <div class="col-8 offset-2">
+      <div id="Hjemmet" class="tabcontent">
+        <h1>Hjemmet</h1>
+        <p>Ved uventet dødsfall i hjemmet er viktig at du først ringer ambulanse eller legevakt. Er det håp om gjenoppliving vil de gjøre alt som står i deres makt for å redde vedkommende. Dersom håp om gjenoppliving ikke lenger er tilstede, vil lege uansett måtte komme på stedet for å bekrefte dødsfallet før vi kan hente ut vedkommende. Lege vil bekrefte dødsfallet og skrive en dødsattest som han/hun har ansvar for å sende videre til skifteretten.</p>
+      </div>
+    </div>
+
+    <div class="col-8 offset-2">
+      <div id="Institusjon" class="tabcontent">
+        <h3>Institusjon</h3>
+        <p>Paris is the capital of France.</p>
+      </div>
+    </div>
+
+    <div class="col-8 offset-2">
+      <div id="Utlandet" class="tabcontent">
+        <h3>Utlandet</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+    </div>
+
+    <div class="col-8 offset-2">
+      <div id="Annet" class="tabcontent">
+        <h3>Annet</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function openPage(evt, pageName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(pageName).style.display = "block";
+    evt.currentTarget.className += " active";
+
+}
+// Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+
+  $(document).ready(function() {
+  			// grab the initial top offset of the navigation
+  		   	var stickyNavTop = $('.page-menu').offset().top;
+
+  		   	// our function that decides weather the navigation bar should have "fixed" css position or not.
+  		   	var stickyNav = function(){
+  			    var scrollTop = $(window).scrollTop(); // our current vertical position from the top
+
+  			    // if we've scrolled more than the navigation, change its position to fixed to stick to top,
+  			    // otherwise change it back to relative
+  			    if (scrollTop > stickyNavTop ) {
+  			        $('.page-menu').addClass('sticky');
+                $('.contents').addClass('add-margin');
+  			    } else {
+  			        $('.page-menu').removeClass('sticky');
+                $('.contents').removeClass('add-margin');
+  			    }
+  			};
+
+  			stickyNav();
+  			// and run it again every time you scroll
+  			$(window).scroll(function() {
+  				stickyNav();
+  			});
+  		});
+</script>

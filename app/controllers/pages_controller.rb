@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def homepage
   end
 
-  def hjelp_ved_dodsfall
+  def ved_dodsfall
   end
 
   def begravelse
